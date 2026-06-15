@@ -1,0 +1,64 @@
+.msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  line-height: 1.55;
+  border: 1px solid transparent;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.info    { background: var(--info-bg);    color: var(--info);    border-color: color-mix(in srgb, var(--info)    30%, transparent); }
+.warning { background: var(--warning-bg); color: var(--warning); border-color: color-mix(in srgb, var(--warning) 30%, transparent); }
+.danger  { background: var(--danger-bg);  color: var(--danger);  border-color: color-mix(in srgb, var(--danger)  30%, transparent); }
+.success { background: var(--green-bg);   color: var(--green);   border-color: color-mix(in srgb, var(--green)   30%, transparent); }
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-family: var(--font-display), sans-serif;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.body {
+  opacity: 0.85;
+  font-size: 11px;
+}
+
+.action {
+  margin-top: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity var(--transition);
+}
+
+.action:hover { opacity: 0.7; }

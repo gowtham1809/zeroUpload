@@ -1,0 +1,79 @@
+.bgOptions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.bgBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg3);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 10px;
+  color: var(--text2);
+}
+
+.bgBtn:hover { border-color: var(--border2); }
+
+.bgActive {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg3)) !important;
+}
+
+.bgSwatch {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+/* Compare */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .compare { grid-template-columns: 1fr; }
+  .bgOptions { grid-template-columns: repeat(2, 1fr); }
+}
+
+.compareItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.compareLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+}
+
+.compareImg {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.transparentBg {
+  background: repeating-conic-gradient(#888 0% 25%, transparent 0% 50%) 0 0 / 12px 12px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.transparentBg .compareImg {
+  border: none;
+}

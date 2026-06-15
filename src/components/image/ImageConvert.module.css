@@ -1,0 +1,139 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.left {}
+.right {}
+
+/* Format grid */
+.fmtGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.fmtBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg3);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.fmtBtn:hover {
+  border-color: var(--border2);
+}
+
+.fmtActive {
+  border-color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg3)) !important;
+}
+
+.fmtSame { opacity: 0.5; }
+
+.fmtLabel {
+  font-family: var(--font-display), sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text2);
+  letter-spacing: 0.06em;
+  transition: color var(--transition);
+}
+
+.fmtActive .fmtLabel { color: var(--accent); }
+
+.fmtSameTag {
+  font-size: 8px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Target size row */
+.targetRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* Preview */
+.previewWrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg3);
+}
+
+.previewImg {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.previewMeta {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 12px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text3);
+}
+
+.previewEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  border: 1px dashed var(--border2);
+  border-radius: var(--radius-lg);
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Guide */
+.guide {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.guideRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.guideRow:last-child { border-bottom: none; }
+
+.guideFmt {
+  font-family: var(--font-display), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  min-width: 36px;
+  flex-shrink: 0;
+}
+
+.guideUse {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.4;
+}

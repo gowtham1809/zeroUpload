@@ -1,0 +1,48 @@
+.ratioGrid {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ratioBtn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg3);
+  color: var(--text2);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.ratioBtn:hover { border-color: var(--border2); color: var(--text); }
+
+.ratioActive {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg3)) !important;
+}
+
+.canvasWrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: crosshair;
+  background: var(--bg3);
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.cropInfo {
+  font-size: 10px;
+  color: var(--text3);
+  text-align: center;
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}

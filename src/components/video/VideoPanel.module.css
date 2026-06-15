@@ -1,0 +1,145 @@
+.panel {
+  /* display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  min-height: 500px; */
+}
+
+@media (max-width: 860px) {
+  .panel { grid-template-columns: 1fr; }
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  /* position: sticky;
+  top: 74px; */
+  margin-bottom: 1rem;
+}
+
+/* Section tabs */
+.sectionTabs {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionTab {
+  padding: 10px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  border-bottom: 2px solid transparent;
+}
+
+.sectionTab:hover { color: var(--text2); }
+
+.sectionActive {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+/* Tool nav */
+.toolNav {
+  padding: 8px;
+  display: flex;
+  gap: 2px;
+}
+
+.navLabel {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding: 6px 8px 4px;
+}
+
+.toolBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: left;
+  width: 100%;
+}
+
+.toolBtn:hover {
+  background: var(--bg3);
+  border-color: var(--border);
+}
+
+.toolActive {
+  background: color-mix(in srgb, var(--accent) 8%, transparent) !important;
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent) !important;
+}
+
+.toolIcon {
+  font-size: 14px;
+  color: var(--text3);
+  min-width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.toolActive .toolIcon { color: var(--accent); }
+.toolBtn:hover .toolIcon { color: var(--text2); }
+
+.toolText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.toolLabel {
+  font-family: var(--font-display), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  transition: color var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toolActive .toolLabel { color: var(--accent); }
+.toolBtn:hover .toolLabel { color: var(--text); }
+
+.toolDesc {
+  font-size: 10px;
+  color: var(--text3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tool area */
+.toolArea {
+  min-height: 400px;
+}
+
+.toolEnter {
+  animation: fadeUp 0.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

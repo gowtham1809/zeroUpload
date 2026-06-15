@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/image.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/image.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>ZeroUpload — Browser-Native Media Toolkit</title>
+    <meta
+      name="description"
+      content="Convert, compress, trim, filter and process video, audio and images — entirely in your browser. No uploads. No accounts. No limits. Your files never leave your device."
+    />
+    <meta
+      name="keywords"
+      content="video converter, audio extractor, image converter, browser media tool, no upload, privacy, gif maker, remove background, video trimmer, image compressor, local processing, free media tool"
+    />
+    <meta name="author" content="ZeroUpload" />
+    <meta name="creator" content="ZeroUpload" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="/image.png" />
+    <meta property="og:site_name" content="ZeroUpload" />
+    <meta property="og:title" content="ZeroUpload — Browser-Native Media Toolkit" />
+    <meta
+      property="og:description"
+      content="Convert, compress, trim, filter and process media entirely in your browser. Nothing ever leaves your device."
+    />
+    <meta property="og:image" content="/image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ZeroUpload — Browser-Native Media Toolkit" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ZeroUpload — Browser-Native Media Toolkit" />
+    <meta
+      name="twitter:description"
+      content="Process media entirely in your browser. No uploads. No accounts. Free forever."
+    />
+    <meta name="twitter:image" content="/image.png" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ZeroUpload",
+        "url": "https://zeroupload.app",
+        "description": "Browser-native media toolkit for converting, compressing, trimming, filtering and processing video, audio and images. All processing is done locally — nothing is uploaded to any server.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript. Chrome, Firefox, Safari 16.4+, Edge.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Video to MP3 extraction",
+          "Video to WAV extraction",
+          "Video trimming",
+          "Video compression",
+          "GIF maker",
+          "Video thumbnail generator",
+          "Video watermark",
+          "Audio trimmer",
+          "Audio merger",
+          "Volume normaliser",
+          "Image filters",
+          "Image format conversion",
+          "Background removal",
+          "Image cropper",
+          "Image compressor",
+          "EXIF data viewer and stripper",
+          "Image watermark"
+        ]
+      }
+    </script>
+
+    <!-- Theme init script — prevents flash of wrong theme -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('zu-theme');
+          if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
